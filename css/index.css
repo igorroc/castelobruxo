@@ -12,8 +12,8 @@ body {
 	background-color: #e4e0e0;
 }
 
-main{
-    padding-left: 19em;
+main {
+	padding-left: 19em;
 }
 
 li {
@@ -24,15 +24,54 @@ a {
 	text-decoration: none;
 }
 
-#topbar{
+#topbar {
+	width: 100%;
+    
+    box-shadow: 5px 0 10px #0002;
+    
+	/* display: flex; */
+	position: fixed;
+}
+
+#topbar #wrapperMenu{
     width: 100%;
     height: 100px;
 
-    background-color: #f9f7fa;
-    box-shadow: 5px 0 10px #0002;
-
     display: flex;
-    position: fixed;
+
+    background-color: #f9f7fa;
+    
+}
+
+#topbar #title {
+	height: 100%;
+	display: flex;
+    gap: 15px;
+	align-items: center;
+}
+
+#topbar #title img {
+	height: 50px;
+}
+
+#topbar #title h1 {
+	font-size: 1em;
+	font-family: "Mate SC", serif;
+	text-transform: uppercase;
+	color: #393939;
+}
+
+#topbar #menu{
+    margin: auto 20px auto auto;
+}
+
+#topbar #menu img{
+    height: 30px;
+}
+
+#topbar #links{
+    max-height: 0;
+    display: none;
 }
 
 #sidebar {
@@ -40,12 +79,12 @@ a {
 	height: 100vh;
 
 	background-color: #f9f7fa;
-    box-shadow: 0 5px 10px #0002;
+	box-shadow: 0 5px 10px #0002;
 
 	display: flex;
 	flex-direction: column;
 
-    position: fixed;
+	position: fixed;
 }
 
 #sidebar #title {
@@ -100,37 +139,37 @@ a {
 }
 
 #fotoPrincipal {
-    width: 100%;
-    height: 100vh;
+	width: 100%;
+	height: 100vh;
 	background: url("https://castelobruxorpg.webnode.com/_files/200000050-ed854ed856/Escola%20sul-americana%20de%20Magia%20e%20Feiti%C3%A7aria%20(6).png?t=1");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
-#post1{
-    width: 95%;
-    max-width: 900px;
-    margin: 0 auto;
-    margin-top: 7em;
+#post1 {
+	width: 95%;
+	max-width: 900px;
+	margin: 0 auto;
+	margin-top: 7em;
 }
 
-#post1 p{
-    margin-bottom: 1em;
-    font-size: 1.2em;
+#post1 p {
+	margin-bottom: 1em;
+	font-size: 1.2em;
 }
 
-#rodape{
-    width: 100%;
-    height: 50px;
-    margin-top: 100px;
-    
-    background-color: #393939;
-    color: white;
+#rodape {
+	width: 100%;
+	height: 50px;
+	margin-top: 100px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	background-color: #393939;
+	color: white;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* ? OPÇÕES */
@@ -139,25 +178,25 @@ a {
 	font-weight: bold !important;
 }
 
-.lineHorizontal{
-    width: 95%;
-    max-width: 900px;
-    height: 2px;
-    background-color: #39393955;
-    margin: 0 auto;
-    margin-top: 5em;
+.lineHorizontal {
+	width: 95%;
+	max-width: 900px;
+	height: 2px;
+	background-color: #39393955;
+	margin: 0 auto;
+	margin-top: 5em;
 }
 
 /* ! RESPONSIVE */
 
-@media (max-width: 1100px){
-    main{
-        padding: 0;
-    }
-    #sidebar{
-        display: none;
-    }
-    #fotoPrincipal{
-        height: 60vh;
-    }
+@media (max-width: 1100px) {
+	main {
+		padding: 0;
+	}
+	#sidebar {
+		display: none;
+	}
+	#fotoPrincipal {
+		height: 60vh;
+	}
 }
