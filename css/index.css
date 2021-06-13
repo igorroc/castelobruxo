@@ -26,27 +26,29 @@ a {
 
 #topbar {
 	width: 100%;
-    
-    box-shadow: 5px 0 10px #0002;
-    
-	/* display: flex; */
+
+	box-shadow: 5px 0 10px #0002;
+
 	position: fixed;
+
+	display: none;
+
+	pointer-events: none;
 }
 
-#topbar #wrapperMenu{
-    width: 100%;
-    height: 100px;
+#topbar #wrapperMenu {
+	width: 100%;
+	height: 100px;
 
-    display: flex;
+	display: flex;
 
-    background-color: #f9f7fa;
-    
+	background-color: #f9f7fa;
 }
 
 #topbar #title {
 	height: 100%;
 	display: flex;
-    gap: 15px;
+	gap: 15px;
 	align-items: center;
 }
 
@@ -55,23 +57,50 @@ a {
 }
 
 #topbar #title h1 {
-	font-size: 1em;
+	font-size: 1.2em;
 	font-family: "Mate SC", serif;
 	text-transform: uppercase;
 	color: #393939;
 }
 
-#topbar #menu{
-    margin: auto 20px auto auto;
+#topbar #menu {
+	margin: auto 20px auto auto;
+	padding: 35px;
+
+	pointer-events: auto;
 }
 
-#topbar #menu img{
-    height: 30px;
+#topbar #menu img {
+	height: 30px;
 }
 
-#topbar #links{
-    max-height: 0;
-    display: none;
+#topbar #links {
+	overflow: auto;
+	max-height: 0;
+
+	background-color: #c7c7c7;
+
+    display: flex;
+    flex-direction: column;
+
+	pointer-events: auto;
+	transition: max-height 900ms ease;
+}
+
+#topbar:hover #links {
+	max-height: 300px;
+}
+
+#topbar #links a {
+	padding: 20px 0;
+	text-align: center;
+
+    color: black;
+	transition: background-color 300ms ease, color 300ms ease;
+}
+
+#topbar #links a:hover {
+	background-color: #b3b3b3;
 }
 
 #sidebar {
@@ -192,11 +221,20 @@ a {
 @media (max-width: 1100px) {
 	main {
 		padding: 0;
+		padding-top: 100px;
+	}
+	#topbar {
+		display: block;
 	}
 	#sidebar {
 		display: none;
 	}
 	#fotoPrincipal {
 		height: 60vh;
+	}
+
+	.linkAtivo {
+		background-color: chartreuse !important;
+        color: black !important;
 	}
 }
