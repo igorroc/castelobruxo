@@ -47,6 +47,9 @@ a {
 
 #topbar #title {
 	height: 100%;
+
+	margin-left: 10px;
+	
 	display: flex;
 	gap: 15px;
 	align-items: center;
@@ -64,7 +67,7 @@ a {
 }
 
 #topbar #menu {
-	margin: auto 20px auto auto;
+	margin: auto 0 auto auto;
 	padding: 35px;
 
 	pointer-events: auto;
@@ -160,6 +163,7 @@ a {
 	font-weight: 200;
 	letter-spacing: 0.0625em;
 	color: #666666;
+	padding: 10px;
 }
 
 #sidebar #links li:hover a {
